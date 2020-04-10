@@ -107,7 +107,14 @@ function opersPressed() {
       cleanAll();
     }
     if (this.textContent === ".") {
+      if(inputDisplay.value.slice(-1) != "."){
       inputDisplay.value += ".";
+      } else{
+        inputDisplay.value = inputDisplay.value.substring(
+          0,
+          inputDisplay.value.length - 1
+        )
+      }
     }
     if (this.textContent === "\u{0221A}") {
       inputDisplay.value = Math.sqrt(inputDisplay.value);
